@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>Úkoly na dnešek: 
+        <ul>
+          <li v-for="(ukol, index) in ukoly" v-on:click="removeTask(index)">
+            {{ukol}}
+
+          </li>
+        </ul>
+      </p>
+      <button v-on:click="addTask">Přidej úkol</button>
+    </div>
+    <script src="index2.js"></script>
+  </body>
+</html>

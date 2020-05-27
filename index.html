@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>Můj pes se jmenuje {{jmeno}}. Váží {{vaha}} kg. Barva jeho srsti je {{barva}} a je mu {{vek}} let.</p>
+      <p>Kdyby byl člověk, bylo by mu {{ vek * 7 }} let.</p>
+      <p>Můj pes má rád tyto činnosti: 
+      <ul>
+        <li v-for="cinnost in cinnosti">
+          {{cinnost}}
+        </li>
+      </ul>
+    </p>
+    <p>Poslední akce: {{akce}}</p>
+    <button v-on:click="nakrmTrochu">Nakrm trochu</button>
+    <button v-on:click="nakrmHodne">Nakrm hodně</button>
+    <button v-on:click="vyvenci">Vyvenči</button>
+    <button v-on:click="zastekej">Zaštěkej!</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
